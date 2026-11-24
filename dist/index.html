@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#11100e">
+  <meta name="description" content="Explore detalhes escondidos em pinturas de Van Eyck, Caravaggio, Vermeer e Goya no Museu da Meia-Noite.">
+  <title>Museu da Meia-Noite — Os segredos das pinturas</title>
+  <link rel="icon" href="assets/lua.png">
+  <link rel="stylesheet" href="styles.css">
+  <script src="museu.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <header class="site-header" id="inicio">
+    <div class="shell header-inner">
+      <a class="brand" href="#inicio" aria-label="Museu da Meia-Noite, início">
+        <img src="assets/lua.png" width="34" height="34" alt="">
+        <span>Museu da<br>Meia-Noite</span>
+      </a>
+      <nav aria-label="Navegação principal">
+        <a href="#acervo">Acervo</a>
+        <a href="#sobre">Sobre o museu</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero" aria-labelledby="hero-title">
+      <figure class="hero-art">
+        <picture>
+          <source media="(max-width: 700px)" srcset="assets/arnolfini.webp">
+          <img src="assets/arnolfini-hero.webp" alt="Um casal diante de um espelho convexo em um quarto pintado por Jan van Eyck." width="1550" height="1315" fetchpriority="high">
+        </picture>
+        <figcaption>O Retrato dos Arnolfini <span>·</span> Jan van Eyck, 1434</figcaption>
+      </figure>
+      <div class="shell hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow rule">Mistérios da história da arte</p>
+          <h1 id="hero-title">Toda pintura<br>guarda um<br><em>segredo.</em></h1>
+          <p class="hero-intro">Um espelho, um gesto, um brilho na sombra. Explore os detalhes que mudam a forma de ver uma pintura.</p>
+          <div class="hero-actions">
+            <a class="button button-gold" href="#obra-arnolfini">Desvendar a obra</a>
+            <a class="text-link" href="#acervo">Explorar acervo</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="collection shell" id="acervo" aria-labelledby="acervo-title">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow rule">Acervo</p>
+          <h2 id="acervo-title">Pinturas para <em>desvendar.</em></h2>
+        </div>
+        <p>Escolha uma obra e siga as pistas dentro da pintura.</p>
+      </div>
+      <div class="filters" role="group" aria-label="Filtrar pinturas por tema">
+        <button type="button" data-filter="todas" aria-pressed="true">Todas as obras</button>
+        <button type="button" data-filter="simbolos" aria-pressed="false">Símbolos</button>
+        <button type="button" data-filter="luz" aria-pressed="false">Luz e sombra</button>
+        <button type="button" data-filter="mitos" aria-pressed="false">Mitos</button>
+      </div>
+      <p class="sr-only" id="filter-status" role="status"></p>
+      <div class="card-grid">
+        <article class="card" data-topics="simbolos">
+          <a href="#obra-arnolfini" class="card-link">
+            <div class="card-art"><img src="assets/arnolfini.webp" alt="" loading="lazy" width="1404" height="1920"></div>
+            <div class="card-body">
+              <p class="card-meta">Jan van Eyck <span>·</span> 1434</p>
+              <h3>O Retrato dos Arnolfini</h3>
+              <p>Quem aparece no espelho?</p>
+            </div>
+          </a>
+        </article>
+        <article class="card" data-topics="simbolos luz">
+          <a href="#obra-emaus" class="card-link">
+            <div class="card-art card-emaus"><img src="assets/emaus.webp" alt="" loading="lazy" width="1600" height="1138"></div>
+            <div class="card-body">
+              <p class="card-meta">Caravaggio <span>·</span> 1601</p>
+              <h3>A Ceia em Emaús</h3>
+              <p>Por que a cesta parece prestes a cair?</p>
+            </div>
+          </a>
+        </article>
+        <article class="card" data-topics="luz">
+          <a href="#obra-perola" class="card-link">
+            <div class="card-art card-perola"><img src="assets/perola.webp" alt="" loading="lazy" width="1450" height="1715"></div>
+            <div class="card-body">
+              <p class="card-meta">Johannes Vermeer <span>·</span> c. 1665</p>
+              <h3>Moça com Brinco de Pérola</h3>
+              <p>O que faz duas pinceladas parecerem uma joia?</p>
+            </div>
+          </a>
+        </article>
+        <article class="card" data-topics="mitos luz">
+          <a href="#obra-saturno" class="card-link">
+            <div class="card-art card-saturno"><img src="assets/saturno.webp" alt="" loading="lazy" width="1071" height="1920"></div>
+            <div class="card-body">
+              <p class="card-meta">Francisco de Goya <span>·</span> 1820–1823</p>
+              <h3>Saturno devorando seu filho</h3>
+              <p>Por que essa cena estava na parede de uma casa?</p>
+            </div>
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <section class="about" id="sobre" aria-labelledby="sobre-title">
+      <div class="shell about-inner">
+        <div>
+          <p class="eyebrow rule">Sobre o museu</p>
+          <h2 id="sobre-title">Um convite para<br><em>olhar de novo.</em></h2>
+        </div>
+        <div class="about-copy">
+          <p>O Museu da Meia-Noite é uma galeria digital sobre as histórias e os mistérios da pintura. Cada investigação começa com algo que você pode ver na própria obra e segue até o que a história da arte ajuda a explicar.</p>
+          <p>Quando há mais de uma interpretação, você encontra as hipóteses e as fontes para continuar a investigação.</p>
+          <a class="text-link" href="#acervo">Voltar ao acervo</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="shell footer-inner">
+      <a class="brand" href="#inicio" aria-label="Museu da Meia-Noite, voltar ao início">
+        <img src="assets/lua.png" width="34" height="34" alt="">
+        <span>Museu da<br>Meia-Noite</span>
+      </a>
+      <a class="text-link" href="#inicio">Voltar ao início</a>
+    </div>
+  </footer>
+
+  <dialog id="investigacao" aria-labelledby="work-title">
+    <div class="dialog-header">
+      <span class="eyebrow">Investigação</span>
+      <form method="dialog"><button type="submit" class="close" aria-label="Fechar investigação" autofocus>×</button></form>
+    </div>
+    <div class="dialog-scroll">
+      <div class="dialog-layout">
+        <figure class="work-figure">
+          <div class="work-image">
+            <img id="painting" alt="">
+            <div id="pins" role="group" aria-label="Pistas sobre a pintura"></div>
+          </div>
+          <figcaption id="image-credit"></figcaption>
+        </figure>
+        <div class="work-copy">
+          <p class="eyebrow" id="work-meta"></p>
+          <h2 id="work-title"></h2>
+          <p id="work-intro"></p>
+          <div id="clue-buttons" class="clue-buttons" role="group" aria-label="Escolher uma pista"></div>
+          <div id="clue-panel" class="clue-panel" aria-live="polite" aria-atomic="true">
+            <p class="eyebrow" id="clue-type"></p>
+            <h3 id="clue-title"></h3>
+            <p id="clue-description"></p>
+          </div>
+          <a id="museum-source" class="text-link" target="_blank" rel="noopener">Consultar a ficha no museu</a>
+        </div>
+      </div>
+    </div>
+  </dialog>
+</body>
+</html>
